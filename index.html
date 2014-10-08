@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bunny Defender</title>
+    <script src="libs/phaser.js"></script>
+    <script src="Boot.js"></script>
+    <script src="Preloader.js"></script>
+    <script src="StartMenu.js"></script>
+    <script src="Game.js"></script>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #000000;
+		}
+	</style>
+</head>
+<body>
+    <div id="gameContainer"></div>
+    <script type="text/javascript">
+        window.onload = function() {
+            var game = new Phaser.Game(540, 960, Phaser.AUTO, 'gameContainer');
+            game.state.add('Boot', SpaceInvaders.Boot);
+            game.state.add('Preloader', SpaceInvaders.Preloader);
+            game.state.add('StartMenu', SpaceInvaders.StartMenu);
+            game.state.add('Game', SpaceInvaders.Game);
+            game.state.start('Boot');
+        }
+    </script>
+</body>
+</html>
