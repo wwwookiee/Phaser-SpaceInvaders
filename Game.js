@@ -4,7 +4,6 @@ SpaceInvaders.Game = function(game) {
 	this.totalRow;
 	this.totalInvadersRow;
 	this.bullets;
-
 };
 
 
@@ -19,24 +18,56 @@ SpaceInvaders.Game.prototype = {
 	},
 
 	buildWorld: function(){
-		this.buildInvaders01();
+		this.buildInvaders();
 		this.buildShip();
 		this.buildBullets();
 	},
 
-	buildInvaders01: function() {
+	buildInvaders: function() {
 	    this.invaders = this.add.group();
 	    this.invaders.enableBody = true;
    		this.invaders.physicsBodyType = Phaser.Physics.ARCADE;
-		    for(var i=0; i<this.totalInvadersRow; i++) {
-		        var invader = this.invaders.create(60+i*70, this.world.width-500, 'invaders', '_invader0000');
-		        invader.name = 'invader'+i;
-		        invader.anchor.setTo(0.5, 0.5);
-		        invader.body.moves = false;
-		        invader.animations.add('invader03', this.game.math.numberArray(96,143));
-		        invader.animations.play('invader03', 24, true);
-		    }
-		        console.log(this.invaders);
+		    for(var i=0; i<this.totalRow; i++) {
+		    	for (var j=0; j<this.totalInvadersRow; j++){ 
+
+		    		var invader = this.invaders.create(25+j*70, 50+ 50*i, 'invaders', '_invader0000');
+		    			invader.name = 'invader'+j;
+		    			invader.anchor.setTo(0.5, 0.5);
+		    			invader.body.moves = false;
+		    			if (i==0) {
+		    				invader.animations.add('invader01', this.game.math.numberArray(1,48));
+		       			invader.animations.play('invader01', 24, true);
+		    			} else if(i==1 || i==2) {
+		    				invader.animations.add('invader03', this.game.math.numberArray(96,143));
+		        			invader.animations.play('invader03', 24, true);
+		    			}else{
+		    				invader.animations.add('invader02', this.game.math.numberArray(49,95));
+		        			invader.animations.play('invader02', 24, true);
+		    			}
+		    // 		switch(i){
+		    // 			case (i==0):
+		    // 				invader.animations.add('invader01', this.game.math.numberArray(1,48));
+		    //     			invader.animations.play('invader01', 24, true);
+		    //     			break;
+						// case (i==1 || i==2):
+		    // 				invader.animations.add('invader03', this.game.math.numberArray(96,143));
+		    //     			invader.animations.play('invader03', 24, true);
+		    //     			break;
+		    //     		case (i==3):
+		    // 				invader.animations.add('invader02', this.game.math.numberArray(49,95));
+		    //     			invader.animations.play('invader02', 24, true);
+		    //     	}
+		    	}
+		    }     
+	//  All this does is basically start the invaders moving. Notice we're moving the Group they belong to, rather than the invaders directly.
+    var tween = this.add.tween(this.invaders).to( { x: 60 }, 2000, Phaser.Easing.Linear.None, true, 0, 1000, true);
+
+    //  When the tween loops it calls descend
+    tween.onLoop.add(this.descend, this);
+	},
+
+	buildInvadersExplosions: function() {
+
 	},
 
 	buildShip: function(){
@@ -61,7 +92,11 @@ SpaceInvaders.Game.prototype = {
 	    }   	 	
 	},
 
-	
+	descend: function() {
+
+    	this.invaders.y += 30;
+
+	},
 
 
 	fireBullet: function() {
