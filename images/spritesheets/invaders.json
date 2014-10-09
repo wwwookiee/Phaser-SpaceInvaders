@@ -1351,11 +1351,19 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
 	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0169",
+	"frame": {"x":192,"y":448,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
 }],
 "meta": {
 	"app": "Adobe Flash Professional",
 	"version": "14.1.0.96",
-	"image": "invader.png",
+	"image": "invaders.png",
 	"format": "RGBA8888",
 	"size": {"w":256,"h":512},
 	"scale": "1"
