@@ -10,7 +10,7 @@ SpaceInvaders.Game = function(game) {
 	this.stateText;
 	this.scoreText;
 	this.totalRow = 1;
-	this.totalInvadersRow = 7;
+	this.totalInvadersRow = 1;
 	this.totalInvaders= this.totalRow*this.totalInvadersRow;
 	this.score = 0;
 	this.gameover = false;
@@ -193,7 +193,7 @@ SpaceInvaders.Game.prototype = {
 	    {	        
  			var random=this.game.rnd.integerInRange(0,livingEnemies.length-1);	        
 	        var shooter=livingEnemies[random];// randomly select one of them
-	        invaderBullet.reset(shooter.body.x, shooter.body.y);
+	        invaderBullet.reset(shooter.body.x+32, shooter.body.y+32);
 	        this.game.physics.arcade.moveToObject(invaderBullet,this.ship,120);
 	        this.invaderBulletTime = this.game.time.now + 2000;
     	}
