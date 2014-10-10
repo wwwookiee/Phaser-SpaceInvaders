@@ -1,16 +1,17 @@
 SpaceInvaders.Game = function(game) {
 	this.invaders;
-	this.totalInvadersRow = 7;
-	this.totalInvaders= this.totalRow*this.totalInvadersRow;
+	this.totalRow;
+	this.totalInvadersRow;
 	this.ship;
 	this.bullets;
 	this.bulletTime = 500;
-	this.score = 0;
 	this.stateText;
 	this.scoreText;
 	this.totalRow = 5;
+	this.totalInvadersRow = 7;
+	this.totalInvaders= this.totalRow*this.totalInvadersRow;
+	this.score = 0;
 	this.gameover = false;
-	this.totalLives = 3;
 	
 };
 
@@ -49,12 +50,15 @@ SpaceInvaders.Game.prototype = {
 
 		    			if (i==0) {
 		    				invader.animations.add('invader01', this.game.math.numberArray(1,48));
+		    				// invader.animations.add('invaderExplosion',  this.game.math.numberArray(144,193));
 		       				invader.animations.play('invader01', 24, true);
 		    			} else if(i==1 || i==2) {
 		    				invader.animations.add('invader03', this.game.math.numberArray(96,143));
+		    				// invader.animations.add('invaderExplosion',  this.game.math.numberArray(144,193));
 		        			invader.animations.play('invader03', 24, true);
 		    			}else{
 		    				invader.animations.add('invader02', this.game.math.numberArray(49,95));
+		    				// invader.animations.add('invaderExplosion',  this.game.math.numberArray(144,193));
 		        			invader.animations.play('invader02', 24, true);
 		    			} 		    			
 		    	} 
@@ -63,7 +67,6 @@ SpaceInvaders.Game.prototype = {
 		var tween = this.add.tween(this.invaders).to( { x: 70 }, 1000, Phaser.Easing.Linear.None, true, 0, 1000, true);
 		//When the tween loops it calls > flyDown
 		tween.onLoop.add(this.flyDown, this);
-
 	},
 
 	buildInvadersExplosions: function(){
@@ -78,6 +81,7 @@ SpaceInvaders.Game.prototype = {
 	        	e.exists = false;
 	        	e.visible = false;
 	       		e.animations.add('invaderExplosion', this.game.math.numberArray(144,168));
+	        	// e.animations.play('invaderExplosion', 24, false);
 	    }   	 	
 	},
 
@@ -138,21 +142,39 @@ SpaceInvaders.Game.prototype = {
 	    }
 	},
 
-	resetBullet: function(bullet) {
+	// fireInvaderExplosion: function(invader) {
+	// 	console.log('fireInvaderExplosion function');
+	// 	invader.animations.play('invaderExplosion', 24, false);
+
+	// 	// explosion = this.invadersExplosions.getFirstExists(false);
+	// 	// if(explosion){
+	// 	// 	explosion.reset(this.invader.x,this.ship.y);
+
+	// 	// }
+	// },
+	
+	//  Called if the bullet goes out of the screen
+	 resetBullet: function(bullet) {
 	 	// console.log('bullet destroyed! Motafuka');
 	    bullet.kill();
 	},
 
 	collisionBulletInvader: function (bullet, invader) {
 		// console.log('aie, tu m\'as cogné du con !');
-    	bullet.kill();
-   		invader.kill();     	  		
+    	  		
+    	//this.fireInvaderExplosion(invader);
+    	//  And create an explosion :)
     	var explosion = this.invadersExplosions.getFirstExists(false);
    		explosion.reset(invader.body.x+32, invader.body.y+32);
+   		// explosion.play('invaderExplosion', 30, false, true);
    		explosion.animations.play('invaderExplosion', 48, false, true);
+    	bullet.kill();
+   		invader.kill(); 
 		this.score += 20; 
    		this.updateScore();
    		this.invadersCount();
+   		
+   		// setTime   		
 	},
 
 	collisionShipInvader: function (ship, invader) {
