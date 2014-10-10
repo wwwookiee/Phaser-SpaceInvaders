@@ -9,23 +9,19 @@ SpaceInvaders.Game = function(game) {
 	this.invaderBulletTime = 0;
 	this.stateText;
 	this.scoreText;
-	this.totalRow = 5;
+	this.totalRow = 1;
 	this.totalInvadersRow = 7;
 	this.totalInvaders= this.totalRow*this.totalInvadersRow;
 	this.score = 0;
 	this.gameover = false;
-	this.totalLives = 3;	
-	
+	this.totalLives = 3;
+	this.livingEnemies = [];	
 };
-
 
 SpaceInvaders.Game.prototype = {
 	
 	create: function() {
 		this.physics.startSystem(Phaser.Physics.ARCADE);
-		this.invaders = this.add.group();
-	    this.invaders.enableBody = true;
-   		this.invaders.physicsBodyType = Phaser.Physics.ARCADE;
 		this.buildWorld();
 		this.input.keyboard.addKeyCapture([ Phaser.Keyboard.LEFT, Phaser.Keyboard.RIGHT, Phaser.Keyboard.SPACEBAR ]);
 	},
@@ -75,8 +71,9 @@ SpaceInvaders.Game.prototype = {
 		this.invadersExplosions = this.add.group();
     	this.invadersExplosions.enableBody = true;
     	this.invadersExplosions.physicsBodyType = Phaser.Physics.ARCADE;
-    	for (var i = 0; i < this.totalInvaders; i++)
+    	for (var i = 0; i < this.totalInvaders*2; i++)
 	    {
+	    		console.log('roar');
 	       	var e = this.invadersExplosions.create(0,0, 'invaders', '_invader0000');
 	        	e.name = 'invaderExplosion' + i;
 	        	e.anchor.setTo(0.5, 0.5);
@@ -183,7 +180,7 @@ SpaceInvaders.Game.prototype = {
 
 	  
 	    invaderBullet = this.invadersBullets.getFirstExists(false);
-	    livingEnemies = [];
+	    livingEnemies = this.livingEnemies;
 	    livingEnemies.length=0;
 
 
@@ -193,8 +190,7 @@ SpaceInvaders.Game.prototype = {
 	    });
 
 	    if (invaderBullet && livingEnemies.length > 0)
-	    {
-	        
+	    {	        
  			var random=this.game.rnd.integerInRange(0,livingEnemies.length-1);	        
 	        var shooter=livingEnemies[random];// randomly select one of them
 	        invaderBullet.reset(shooter.body.x, shooter.body.y);
@@ -204,9 +200,9 @@ SpaceInvaders.Game.prototype = {
 	},
 
 	explodeShip: function() {
-		var explosion = this.shipExplosions.getFirstExists(false);
-   		explosion.reset(this.ship.body.x+26, this.ship.body.y+16);
-   		explosion.animations.play('shipExplosion', 48, false, true);
+		var explosion2 = this.shipExplosions.getFirstExists(false);
+   		explosion2.reset(this.ship.body.x+26, this.ship.body.y+16);
+   		explosion2.animations.play('shipExplosion', 48, false, true);
 	},
 	
 	resetBullet: function(bullet) {
@@ -216,11 +212,11 @@ SpaceInvaders.Game.prototype = {
 
 	collisionBulletInvader: function (bullet, invader) {
 		// console.log('aie, tu m\'as cogné du con !');
+    	bullet.kill();
+   		invader.kill(); 
     	var explosion = this.invadersExplosions.getFirstExists(false);
    		explosion.reset(invader.body.x+32, invader.body.y+32);
    		explosion.animations.play('invaderExplosion', 24, false, true);
-    	bullet.kill();
-   		invader.kill(); 
 		this.score += 20; 
    		this.updateScore();
    		this.invadersCount();
@@ -265,10 +261,13 @@ SpaceInvaders.Game.prototype = {
 	},
 
 	restartGame: function(){
-		console.log('restartGame function');
+		// console.log('restartGame function');
+      	this.totalInvaders= this.totalRow*this.totalInvadersRow;
 		this.score = 0;
 		this.gameover = false;
+		this.livingEnemies.length = 0;	
 		this.state.start('StartMenu');
+		// this.invadersExplosions.callAll('revive',this);
 		// this.invaders.callAll('kill',this);
 		// this.invaders.removeAll();
 		// console.log(this.invaders);
@@ -280,7 +279,7 @@ SpaceInvaders.Game.prototype = {
 	},
 
 	update: function() {
-
+		console.log(this.totalInvaders);
 		//Ship handler
 		this.ship.body.velocity.x = 0;
 	    this.ship.body.velocity.y = 0;
