@@ -1,17 +1,16 @@
 SpaceInvaders.Game = function(game) {
 	this.invaders;
-	this.totalRow;
-	this.totalInvadersRow;
+	this.totalInvadersRow = 7;
+	this.totalInvaders= this.totalRow*this.totalInvadersRow;
 	this.ship;
 	this.bullets;
 	this.bulletTime = 500;
+	this.score = 0;
 	this.stateText;
 	this.scoreText;
 	this.totalRow = 5;
-	this.totalInvadersRow = 7;
-	this.totalInvaders= this.totalRow*this.totalInvadersRow;
-	this.score = 0;
 	this.gameover = false;
+	this.totalLives = 3;
 	
 };
 
@@ -23,8 +22,6 @@ SpaceInvaders.Game.prototype = {
 		this.invaders = this.add.group();
 	    this.invaders.enableBody = true;
    		this.invaders.physicsBodyType = Phaser.Physics.ARCADE;
-
-
 		this.buildWorld();
 		this.input.keyboard.addKeyCapture([ Phaser.Keyboard.LEFT, Phaser.Keyboard.RIGHT, Phaser.Keyboard.SPACEBAR ]);
 	},
@@ -52,21 +49,18 @@ SpaceInvaders.Game.prototype = {
 
 		    			if (i==0) {
 		    				invader.animations.add('invader01', this.game.math.numberArray(1,48));
-		    				invader.animations.add('invaderExplosion',  this.game.math.numberArray(144,168));
 		       				invader.animations.play('invader01', 24, true);
 		    			} else if(i==1 || i==2) {
 		    				invader.animations.add('invader03', this.game.math.numberArray(96,143));
-		    				invader.animations.add('invaderExplosion',  this.game.math.numberArray(144,168));
 		        			invader.animations.play('invader03', 24, true);
 		    			}else{
 		    				invader.animations.add('invader02', this.game.math.numberArray(49,95));
-		    				invader.animations.add('invaderExplosion',  this.game.math.numberArray(144,168));
 		        			invader.animations.play('invader02', 24, true);
 		    			} 		    			
 		    	} 
 		    } 
 		//All this does is basically start the invaders moving. Notice we're moving the Group they belong to, rather than the invaders directly.
-		var tween = this.add.tween(this.invaders).to( { x: 70 }, 750, Phaser.Easing.Linear.None, true, 0, 750, true);
+		var tween = this.add.tween(this.invaders).to( { x: 70 }, 1000, Phaser.Easing.Linear.None, true, 0, 1000, true);
 		//When the tween loops it calls > flyDown
 		tween.onLoop.add(this.flyDown, this);
 
@@ -78,13 +72,12 @@ SpaceInvaders.Game.prototype = {
     	this.invadersExplosions.physicsBodyType = Phaser.Physics.ARCADE;
     	for (var i = 0; i < this.totalInvaders; i++)
 	    {
-	       	var e = this.invaders.create(0,0, 'invaders', '_invader0000');
+	       	var e = this.invadersExplosions.create(0,0, 'invaders', '_invader0000');
 	        	e.name = 'invaderExplosion' + i;
 	        	e.anchor.setTo(0.5, 0.5);
 	        	e.exists = false;
 	        	e.visible = false;
-	       		e.animations.add('invaderExplosion', this.game.math.numberArray(169,193));
-	        	e.animations.play('invaderExplosion', 24, false);
+	       		e.animations.add('invaderExplosion', this.game.math.numberArray(144,168));
 	    }   	 	
 	},
 
@@ -145,17 +138,7 @@ SpaceInvaders.Game.prototype = {
 	    }
 	},
 
-	fireInvaderExplosion: function(invader) {
-		console.log('fireInvaderExplosion function');
-		console.log(this.invadersExplosions);
-		explosion = this.invadersExplosions.getFirstExists(false);
-		if(explosion){
-			explosion.reset(this.invader.x,this.ship.y);
-		}
-	},
-	
-	//  Called if the bullet goes out of the screen
-	 resetBullet: function(bullet) {
+	resetBullet: function(bullet) {
 	 	// console.log('bullet destroyed! Motafuka');
 	    bullet.kill();
 	},
@@ -163,11 +146,13 @@ SpaceInvaders.Game.prototype = {
 	collisionBulletInvader: function (bullet, invader) {
 		// console.log('aie, tu m\'as cogné du con !');
     	bullet.kill();
-    	this.fireInvaderExplosion();
-   		invader.kill();   		
+   		invader.kill();     	  		
+    	var explosion = this.invadersExplosions.getFirstExists(false);
+   		explosion.reset(invader.body.x+32, invader.body.y+32);
+   		explosion.animations.play('invaderExplosion', 48, false, true);
 		this.score += 20; 
    		this.updateScore();
-   		this.invadersCount();   		
+   		this.invadersCount();
 	},
 
 	collisionShipInvader: function (ship, invader) {
@@ -202,6 +187,7 @@ SpaceInvaders.Game.prototype = {
 		this.score = 0;
 		this.gameover = false;
 		this.state.start('StartMenu');
+		// this.invaders.callAll('kill',this);
 		// this.invaders.removeAll();
 		// console.log(this.invaders);
 		// this.ship.kill();
