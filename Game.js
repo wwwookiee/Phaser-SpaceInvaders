@@ -4,7 +4,9 @@ SpaceInvaders.Game = function(game) {
 	this.totalInvadersRow;
 	this.ship;
 	this.bullets;
-	this.bulletTime = 500;
+	this.invadersBullets;
+	this.bulletTime = 0;
+	this.invaderBulletTime = 0;
 	this.stateText;
 	this.scoreText;
 	this.totalRow = 5;
@@ -12,6 +14,7 @@ SpaceInvaders.Game = function(game) {
 	this.totalInvaders= this.totalRow*this.totalInvadersRow;
 	this.score = 0;
 	this.gameover = false;
+	this.totalLives = 3;	
 	
 };
 
@@ -31,9 +34,11 @@ SpaceInvaders.Game.prototype = {
 		this.buildInvaders();
 		this.buildShip();
 		this.buildBullets();
+		this.buildInvadersBullets();
 		this.buildStateText();
 		this.buildUI();
 		this.buildInvadersExplosions();
+		this.buildShipExplosion();
 	},
 
 	buildInvaders: function() {
@@ -50,15 +55,12 @@ SpaceInvaders.Game.prototype = {
 
 		    			if (i==0) {
 		    				invader.animations.add('invader01', this.game.math.numberArray(1,48));
-		    				// invader.animations.add('invaderExplosion',  this.game.math.numberArray(144,193));
 		       				invader.animations.play('invader01', 24, true);
 		    			} else if(i==1 || i==2) {
 		    				invader.animations.add('invader03', this.game.math.numberArray(96,143));
-		    				// invader.animations.add('invaderExplosion',  this.game.math.numberArray(144,193));
 		        			invader.animations.play('invader03', 24, true);
 		    			}else{
 		    				invader.animations.add('invader02', this.game.math.numberArray(49,95));
-		    				// invader.animations.add('invaderExplosion',  this.game.math.numberArray(144,193));
 		        			invader.animations.play('invader02', 24, true);
 		    			} 		    			
 		    	} 
@@ -80,10 +82,27 @@ SpaceInvaders.Game.prototype = {
 	        	e.anchor.setTo(0.5, 0.5);
 	        	e.exists = false;
 	        	e.visible = false;
-	       		e.animations.add('invaderExplosion', this.game.math.numberArray(144,168));
+	       		e.animations.add('invaderExplosion', this.game.math.numberArray(144,157));
 	        	// e.animations.play('invaderExplosion', 24, false);
 	    }   	 	
 	},
+
+	buildShipExplosion: function(){
+		this.shipExplosions = this.add.group();
+    	this.shipExplosions.enableBody = true;
+    	this.shipExplosions.physicsBodyType = Phaser.Physics.ARCADE;
+    	for (var i = 0; i < this.totalLives; i++)
+	    {
+	       	var e = this.shipExplosions.create(0,0, 'invaders', '_invader0000');
+	        	e.name = 'shipExplosion' + i;
+	        	e.anchor.setTo(0.5, 0.5);
+	        	e.exists = false;
+	        	e.visible = false;
+	       		e.animations.add('shipExplosion', this.game.math.numberArray(158,172));
+	    }   	 	
+	},
+
+
 
 	buildShip: function() {
 		this.ship = this.add.sprite(270, 900, 'ship');
@@ -107,6 +126,24 @@ SpaceInvaders.Game.prototype = {
 	    }   	 	
 	},
 
+	
+	buildInvadersBullets: function(){
+		this.invadersBullets = this.add.group();
+    	this.invadersBullets.enableBody = true;
+    	this.invadersBullets.physicsBodyType = Phaser.Physics.ARCADE;
+    	for (var i = 0; i < 20; i++)
+	    {
+	        var b = this.invadersBullets.create(0, 0, 'invaderBullet');
+	        	b.name = 'invaderBullet' + i;
+	       		b.exists = false;
+	       	 	b.visible = false;
+	        	b.checkWorldBounds = true;
+	        	b.events.onOutOfBounds.add(this.resetBullet, this);
+	    }   	 	
+	},
+
+
+
 	buildStateText: function(){
 		this.stateText = this.add.bitmapText(this.world.centerX, this.world.centerY, 'eightbitwonder', "MyText", 24);
         this.stateText.align = 'center';
@@ -123,7 +160,7 @@ SpaceInvaders.Game.prototype = {
 	},
 
 	flyDown: function() {
-    	this.invaders.y += 20;
+    	this.invaders.y += 30;
 	},
 
 
@@ -142,45 +179,68 @@ SpaceInvaders.Game.prototype = {
 	    }
 	},
 
-	// fireInvaderExplosion: function(invader) {
-	// 	console.log('fireInvaderExplosion function');
-	// 	invader.animations.play('invaderExplosion', 24, false);
+	fireInvaderBullet: function(invader, bullet) {
 
-	// 	// explosion = this.invadersExplosions.getFirstExists(false);
-	// 	// if(explosion){
-	// 	// 	explosion.reset(this.invader.x,this.ship.y);
+	  
+	    invaderBullet = this.invadersBullets.getFirstExists(false);
+	    livingEnemies = [];
+	    livingEnemies.length=0;
 
-	// 	// }
-	// },
+
+	    this.invaders.forEachAlive(function(invader){
+ 	        // put every living enemy in an array
+	        livingEnemies.push(invader);
+	    });
+
+	    if (invaderBullet && livingEnemies.length > 0)
+	    {
+	        
+ 			var random=this.game.rnd.integerInRange(0,livingEnemies.length-1);	        
+	        var shooter=livingEnemies[random];// randomly select one of them
+	        invaderBullet.reset(shooter.body.x, shooter.body.y);
+	        this.game.physics.arcade.moveToObject(invaderBullet,this.ship,120);
+	        this.invaderBulletTime = this.game.time.now + 2000;
+    	}
+	},
+
+	explodeShip: function() {
+		var explosion = this.shipExplosions.getFirstExists(false);
+   		explosion.reset(this.ship.body.x+26, this.ship.body.y+16);
+   		explosion.animations.play('shipExplosion', 48, false, true);
+	},
 	
-	//  Called if the bullet goes out of the screen
-	 resetBullet: function(bullet) {
+	resetBullet: function(bullet) {
 	 	// console.log('bullet destroyed! Motafuka');
 	    bullet.kill();
 	},
 
 	collisionBulletInvader: function (bullet, invader) {
 		// console.log('aie, tu m\'as cogné du con !');
-    	  		
-    	//this.fireInvaderExplosion(invader);
-    	//  And create an explosion :)
     	var explosion = this.invadersExplosions.getFirstExists(false);
    		explosion.reset(invader.body.x+32, invader.body.y+32);
-   		// explosion.play('invaderExplosion', 30, false, true);
-   		explosion.animations.play('invaderExplosion', 48, false, true);
+   		explosion.animations.play('invaderExplosion', 24, false, true);
     	bullet.kill();
    		invader.kill(); 
 		this.score += 20; 
    		this.updateScore();
    		this.invadersCount();
-   		
-   		// setTime   		
+   	},
+
+	collisionInvadersBulletsShip: function(bullet, ship){
+		bullet.kill();
+	   	ship.kill();
+	   	this.explodeShip();	   	
+	   	this.stateText.text = " GAME OVER \n Click to restart";
+        this.stateText.visible = true;
+        this.gameover = true;
+        this.game.input.onTap.addOnce(this.restartGame,this);
 	},
 
 	collisionShipInvader: function (ship, invader) {
 	   	// console.log('GAME OVER !');
 	   	invader.kill();
 	   	ship.kill();
+	   	this.explodeShip();
    		this.stateText.text = " GAME OVER \n Click to restart";
         this.stateText.visible = true;
         this.gameover = true;
@@ -240,9 +300,17 @@ SpaceInvaders.Game.prototype = {
 	        this.fireBullet();
 	    }
 
+	    if (this.game.time.now >  this.invaderBulletTime && this.gameover == false)
+    	{
+       		this.fireInvaderBullet();
+   		}
+
 	    // collision
-   		this.physics.arcade.overlap(this.bullets, this.invaders, this.collisionBulletInvader, null, this);
-   		this.physics.arcade.overlap(this.ship, this.invaders, this.collisionShipInvader, null, this);
+   		if(this.gameover == false){
+	   		this.physics.arcade.overlap(this.ship, this.invaders, this.collisionShipInvader, null, this);
+	   		this.physics.arcade.overlap(this.bullets, this.invaders, this.collisionBulletInvader, null, this);
+	   		this.physics.arcade.overlap(this.invadersBullets, this.ship, this.collisionInvadersBulletsShip, null, this);   			
+   		}
 	}
 
 };

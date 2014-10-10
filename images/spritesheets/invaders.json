@@ -770,7 +770,7 @@
 }
 ,{
 	"filename": "_invader0096",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -778,7 +778,7 @@
 }
 ,{
 	"filename": "_invader0097",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -786,7 +786,7 @@
 }
 ,{
 	"filename": "_invader0098",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -794,7 +794,7 @@
 }
 ,{
 	"filename": "_invader0099",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -802,7 +802,7 @@
 }
 ,{
 	"filename": "_invader0100",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -810,7 +810,7 @@
 }
 ,{
 	"filename": "_invader0101",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -818,7 +818,7 @@
 }
 ,{
 	"filename": "_invader0102",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -826,7 +826,7 @@
 }
 ,{
 	"filename": "_invader0103",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -834,7 +834,7 @@
 }
 ,{
 	"filename": "_invader0104",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -842,7 +842,7 @@
 }
 ,{
 	"filename": "_invader0105",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -850,7 +850,7 @@
 }
 ,{
 	"filename": "_invader0106",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -858,7 +858,7 @@
 }
 ,{
 	"filename": "_invader0107",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -866,7 +866,7 @@
 }
 ,{
 	"filename": "_invader0108",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -874,7 +874,7 @@
 }
 ,{
 	"filename": "_invader0109",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -882,7 +882,7 @@
 }
 ,{
 	"filename": "_invader0110",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -890,7 +890,7 @@
 }
 ,{
 	"filename": "_invader0111",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -898,7 +898,7 @@
 }
 ,{
 	"filename": "_invader0112",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -906,7 +906,7 @@
 }
 ,{
 	"filename": "_invader0113",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -914,7 +914,7 @@
 }
 ,{
 	"filename": "_invader0114",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -922,7 +922,7 @@
 }
 ,{
 	"filename": "_invader0115",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -930,7 +930,7 @@
 }
 ,{
 	"filename": "_invader0116",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -938,7 +938,7 @@
 }
 ,{
 	"filename": "_invader0117",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -946,7 +946,7 @@
 }
 ,{
 	"filename": "_invader0118",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -954,7 +954,7 @@
 }
 ,{
 	"filename": "_invader0119",
-	"frame": {"x":0,"y":64,"w":64,"h":64},
+	"frame": {"x":256,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -962,7 +962,7 @@
 }
 ,{
 	"filename": "_invader0120",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -970,7 +970,7 @@
 }
 ,{
 	"filename": "_invader0121",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -978,7 +978,7 @@
 }
 ,{
 	"filename": "_invader0122",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -986,7 +986,7 @@
 }
 ,{
 	"filename": "_invader0123",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -994,7 +994,7 @@
 }
 ,{
 	"filename": "_invader0124",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1002,7 +1002,7 @@
 }
 ,{
 	"filename": "_invader0125",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1010,7 +1010,7 @@
 }
 ,{
 	"filename": "_invader0126",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1018,7 +1018,7 @@
 }
 ,{
 	"filename": "_invader0127",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1026,7 +1026,7 @@
 }
 ,{
 	"filename": "_invader0128",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1034,7 +1034,7 @@
 }
 ,{
 	"filename": "_invader0129",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1042,7 +1042,7 @@
 }
 ,{
 	"filename": "_invader0130",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1050,7 +1050,7 @@
 }
 ,{
 	"filename": "_invader0131",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1058,7 +1058,7 @@
 }
 ,{
 	"filename": "_invader0132",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1066,7 +1066,7 @@
 }
 ,{
 	"filename": "_invader0133",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1074,7 +1074,7 @@
 }
 ,{
 	"filename": "_invader0134",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1082,7 +1082,7 @@
 }
 ,{
 	"filename": "_invader0135",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1090,7 +1090,7 @@
 }
 ,{
 	"filename": "_invader0136",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1098,7 +1098,7 @@
 }
 ,{
 	"filename": "_invader0137",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1106,7 +1106,7 @@
 }
 ,{
 	"filename": "_invader0138",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1114,7 +1114,7 @@
 }
 ,{
 	"filename": "_invader0139",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1122,7 +1122,7 @@
 }
 ,{
 	"filename": "_invader0140",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1130,7 +1130,7 @@
 }
 ,{
 	"filename": "_invader0141",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1138,7 +1138,7 @@
 }
 ,{
 	"filename": "_invader0142",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1146,7 +1146,7 @@
 }
 ,{
 	"filename": "_invader0143",
-	"frame": {"x":64,"y":64,"w":64,"h":64},
+	"frame": {"x":320,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1154,7 +1154,7 @@
 }
 ,{
 	"filename": "_invader0144",
-	"frame": {"x":128,"y":64,"w":64,"h":64},
+	"frame": {"x":384,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1162,7 +1162,7 @@
 }
 ,{
 	"filename": "_invader0145",
-	"frame": {"x":192,"y":64,"w":64,"h":64},
+	"frame": {"x":448,"y":0,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1170,7 +1170,7 @@
 }
 ,{
 	"filename": "_invader0146",
-	"frame": {"x":0,"y":128,"w":64,"h":64},
+	"frame": {"x":0,"y":64,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1178,7 +1178,7 @@
 }
 ,{
 	"filename": "_invader0147",
-	"frame": {"x":64,"y":128,"w":64,"h":64},
+	"frame": {"x":64,"y":64,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1186,7 +1186,7 @@
 }
 ,{
 	"filename": "_invader0148",
-	"frame": {"x":128,"y":128,"w":64,"h":64},
+	"frame": {"x":128,"y":64,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1194,7 +1194,7 @@
 }
 ,{
 	"filename": "_invader0149",
-	"frame": {"x":192,"y":128,"w":64,"h":64},
+	"frame": {"x":192,"y":64,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1202,7 +1202,7 @@
 }
 ,{
 	"filename": "_invader0150",
-	"frame": {"x":0,"y":192,"w":64,"h":64},
+	"frame": {"x":256,"y":64,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1210,7 +1210,7 @@
 }
 ,{
 	"filename": "_invader0151",
-	"frame": {"x":64,"y":192,"w":64,"h":64},
+	"frame": {"x":320,"y":64,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1218,7 +1218,7 @@
 }
 ,{
 	"filename": "_invader0152",
-	"frame": {"x":128,"y":192,"w":64,"h":64},
+	"frame": {"x":384,"y":64,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1226,7 +1226,7 @@
 }
 ,{
 	"filename": "_invader0153",
-	"frame": {"x":192,"y":192,"w":64,"h":64},
+	"frame": {"x":448,"y":64,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1234,7 +1234,7 @@
 }
 ,{
 	"filename": "_invader0154",
-	"frame": {"x":0,"y":256,"w":64,"h":64},
+	"frame": {"x":0,"y":128,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1242,7 +1242,7 @@
 }
 ,{
 	"filename": "_invader0155",
-	"frame": {"x":64,"y":256,"w":64,"h":64},
+	"frame": {"x":64,"y":128,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1250,7 +1250,7 @@
 }
 ,{
 	"filename": "_invader0156",
-	"frame": {"x":128,"y":256,"w":64,"h":64},
+	"frame": {"x":128,"y":128,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1258,7 +1258,7 @@
 }
 ,{
 	"filename": "_invader0157",
-	"frame": {"x":192,"y":256,"w":64,"h":64},
+	"frame": {"x":192,"y":128,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1266,7 +1266,7 @@
 }
 ,{
 	"filename": "_invader0158",
-	"frame": {"x":0,"y":320,"w":64,"h":64},
+	"frame": {"x":256,"y":128,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1274,7 +1274,7 @@
 }
 ,{
 	"filename": "_invader0159",
-	"frame": {"x":64,"y":320,"w":64,"h":64},
+	"frame": {"x":320,"y":128,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1282,7 +1282,7 @@
 }
 ,{
 	"filename": "_invader0160",
-	"frame": {"x":128,"y":320,"w":64,"h":64},
+	"frame": {"x":384,"y":128,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1290,7 +1290,7 @@
 }
 ,{
 	"filename": "_invader0161",
-	"frame": {"x":192,"y":320,"w":64,"h":64},
+	"frame": {"x":448,"y":128,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1298,7 +1298,7 @@
 }
 ,{
 	"filename": "_invader0162",
-	"frame": {"x":0,"y":384,"w":64,"h":64},
+	"frame": {"x":0,"y":192,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1306,7 +1306,7 @@
 }
 ,{
 	"filename": "_invader0163",
-	"frame": {"x":64,"y":384,"w":64,"h":64},
+	"frame": {"x":64,"y":192,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1314,7 +1314,7 @@
 }
 ,{
 	"filename": "_invader0164",
-	"frame": {"x":128,"y":384,"w":64,"h":64},
+	"frame": {"x":128,"y":192,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1322,7 +1322,7 @@
 }
 ,{
 	"filename": "_invader0165",
-	"frame": {"x":192,"y":384,"w":64,"h":64},
+	"frame": {"x":192,"y":192,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1330,7 +1330,7 @@
 }
 ,{
 	"filename": "_invader0166",
-	"frame": {"x":0,"y":448,"w":64,"h":64},
+	"frame": {"x":256,"y":192,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1338,7 +1338,7 @@
 }
 ,{
 	"filename": "_invader0167",
-	"frame": {"x":64,"y":448,"w":64,"h":64},
+	"frame": {"x":320,"y":192,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1346,7 +1346,7 @@
 }
 ,{
 	"filename": "_invader0168",
-	"frame": {"x":128,"y":448,"w":64,"h":64},
+	"frame": {"x":384,"y":192,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1354,7 +1354,103 @@
 }
 ,{
 	"filename": "_invader0169",
-	"frame": {"x":192,"y":448,"w":64,"h":64},
+	"frame": {"x":448,"y":192,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0170",
+	"frame": {"x":0,"y":256,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0171",
+	"frame": {"x":64,"y":256,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0172",
+	"frame": {"x":128,"y":256,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0173",
+	"frame": {"x":192,"y":256,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0174",
+	"frame": {"x":256,"y":256,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0175",
+	"frame": {"x":320,"y":256,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0176",
+	"frame": {"x":384,"y":256,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0177",
+	"frame": {"x":448,"y":256,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0178",
+	"frame": {"x":0,"y":320,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0179",
+	"frame": {"x":64,"y":320,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0180",
+	"frame": {"x":128,"y":320,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}
+,{
+	"filename": "_invader0181",
+	"frame": {"x":192,"y":128,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -1365,7 +1461,7 @@
 	"version": "14.1.0.96",
 	"image": "invaders.png",
 	"format": "RGBA8888",
-	"size": {"w":256,"h":512},
+	"size": {"w":512,"h":512},
 	"scale": "1"
 }
 }
