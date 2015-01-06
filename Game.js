@@ -9,8 +9,8 @@ SpaceInvaders.Game = function(game) {
 	this.invaderBulletTime = 0;
 	this.stateText;
 	this.scoreText;
-	this.totalRow = 1;
-	this.totalInvadersRow = 1;
+	this.totalRow = 7;
+	this.totalInvadersRow = 5;
 	this.totalInvaders= this.totalRow*this.totalInvadersRow;
 	this.score = 0;
 	this.gameover = false;
